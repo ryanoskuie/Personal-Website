@@ -1,14 +1,128 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.2">
-  <style type="text/css">
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: #007BFF;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+        nav a:hover {
+            background: #555;
+        }
+        section {
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 900px;
+            background: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .skills, .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .skills div, .projects div {
+            flex: 1 1 30%;
+            background: #fff;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hi, I’m [Your Name]! A passionate [Your Profession/Field].</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Welcome to my portfolio! I’m a [Your Profession/Field] with experience in [Your Experience/Expertise]. I love working on [Your Interests], and I’m always excited to learn new things.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div>HTML & CSS</div>
+            <div>JavaScript</div>
+            <div>Python</div>
+            <div>Data Analysis</div>
+            <div>UI/UX Design</div>
+            <div>Version Control (Git/GitHub)</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div>
+                <h3>Project 1</h3>
+                <p>A brief description of your project.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div>
+                <h3>Project 2</h3>
+                <p>A brief description of your project.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div>
+                <h3>Project 3</h3>
+                <p>A brief description of your project.</p>
+                <a href="#">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me!</p>
+        <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+        <p>LinkedIn: <a href="#">Your LinkedIn Profile</a></p>
+        <p>GitHub: <a href="#">Your GitHub Profile</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 [Your Name]. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
