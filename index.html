@@ -68,6 +68,19 @@
         a:hover {
             text-decoration: underline;
         }
+        .upload-button {
+            display: block;
+            margin: 1rem 0;
+            padding: 0.5rem 1rem;
+            background: #0056b3;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .upload-button:hover {
+            background: #003d80;
+        }
     </style>
 </head>
 <body>
@@ -126,8 +139,13 @@
     <section id="contact">
         <h2>Contact</h2>
         <p>Feel free to reach out to me!</p>
-        <p>Email: <a href="ryanoskuie@gmail.com">ryanoskuie@gmail.com</a></p>
-        <p>GitHub: <a href="ryanoskuie">ryanoskuie</a></p>
+        <p>Email: <a href="mailto:ryanoskuie@gmail.com">ryanoskuie@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/ryanoskuie">ryanoskuie</a></p>
+        <form>
+            <label for="resume-upload">Upload Your Resume:</label><br>
+            <input type="file" id="resume-upload" name="resume-upload" accept=".pdf,.doc,.docx" class="upload-button">
+            <button type="submit" class="upload-button">Submit</button>
+        </form>
     </section>
 
     <footer>
@@ -135,3 +153,4 @@
     </footer>
 </body>
 </html>
+
