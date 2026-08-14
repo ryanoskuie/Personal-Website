@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects — Ryan Oskuie</title>
-    <meta name="description" content="Projects built by Ryan Oskuie — production work, school assignments, and independent builds.">
+    <title>Experience — Ryan Oskuie</title>
+    <meta name="description" content="Work experience and community involvement of Ryan Oskuie.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -124,40 +124,10 @@
             margin: 0 auto;
         }
 
-        /* Category quick-nav */
-        .category-nav {
-            display: flex;
-            gap: 0.75rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            max-width: 1000px;
-            margin: 2rem auto 0;
-            padding: 0 2rem;
-        }
-
-        .category-nav a {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 999px;
-            border: 1px solid var(--border);
-            background: var(--bg-card);
-            transition: all 0.2s ease;
-        }
-
-        .category-nav a:hover {
-            color: var(--text);
-            border-color: var(--accent);
-            background: rgba(99, 102, 241, 0.1);
-        }
-
         section {
             max-width: 1000px;
             margin: 0 auto;
             padding: 3rem 2rem;
-            scroll-margin-top: 5rem;
         }
 
         .section-label {
@@ -173,23 +143,17 @@
             font-size: 2rem;
             font-weight: 700;
             letter-spacing: -0.02em;
-            margin: 0 0 0.5rem;
-        }
-
-        .category-desc {
-            color: var(--text-muted);
             margin: 0 0 2rem;
-            max-width: 640px;
         }
 
-        /* Project cards */
-        .project-grid {
+        /* Timeline cards */
+        .timeline {
             display: flex;
             flex-direction: column;
             gap: 1.25rem;
         }
 
-        .project-card {
+        .experience-card {
             position: relative;
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -200,13 +164,13 @@
             transition: all 0.25s ease;
         }
 
-        .project-card:hover {
+        .experience-card:hover {
             border-color: var(--border-strong);
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
-        .project-card::before {
+        .experience-card::before {
             content: '';
             position: absolute;
             left: 0;
@@ -218,7 +182,7 @@
             opacity: 0.8;
         }
 
-        .project-header {
+        .experience-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
@@ -227,7 +191,7 @@
             margin-bottom: 0.5rem;
         }
 
-        .project-card h3 {
+        .experience-card h3 {
             margin: 0;
             font-size: 1.25rem;
             font-weight: 700;
@@ -235,28 +199,15 @@
             letter-spacing: -0.01em;
         }
 
-        .project-card .project-links {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .project-card .project-links a {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
+        .experience-card .role {
             color: var(--accent);
-            text-decoration: none;
-            padding: 0.3rem 0.75rem;
-            border-radius: 999px;
-            border: 1px solid rgba(99, 102, 241, 0.25);
-            background: rgba(99, 102, 241, 0.1);
-            transition: all 0.2s ease;
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin: 0.25rem 0 0.75rem;
+            font-family: 'JetBrains Mono', monospace;
         }
 
-        .project-card .project-links a:hover {
-            background: rgba(99, 102, 241, 0.2);
-        }
-
-        .project-card p {
+        .experience-card p {
             color: var(--text-muted);
             margin: 0.75rem 0 0;
         }
@@ -278,14 +229,51 @@
             border-radius: 999px;
         }
 
-        /* Empty state, shown until real project cards replace it */
-        .empty-state {
-            border: 1px dashed var(--border-strong);
+        /* Community card */
+        .community-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
             border-radius: 16px;
-            padding: 2.5rem 2rem;
-            text-align: center;
-            color: var(--text-muted);
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: grid;
+            grid-template-columns: 1fr 200px;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .community-card h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        .community-card .role {
+            color: var(--accent);
+            font-weight: 500;
             font-size: 0.95rem;
+            margin: 0 0 0.75rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .community-card p {
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .community-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            .community-card { grid-template-columns: 1fr; }
+            .community-card img { max-width: 200px; justify-self: center; }
         }
 
         footer {
@@ -316,7 +304,7 @@
             nav { padding: 0.85rem 1.25rem; }
             .nav-links a { padding: 0.5rem 0.65rem; font-size: 0.9rem; }
             section { padding: 2rem 1.25rem; }
-            .project-card { padding: 1.5rem 1.5rem 1.5rem 1.75rem; }
+            .experience-card { padding: 1.5rem 1.5rem 1.5rem 1.75rem; }
         }
     </style>
 </head>
@@ -325,48 +313,81 @@
         <a href="index.html" class="nav-brand">Ryan <span>Oskuie</span></a>
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="experience.html">Experience</a>
-            <a href="projects.html" class="active">Projects</a>
+            <a href="experience.html" class="active">Experience</a>
+            <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
         </div>
     </nav>
 
     <header class="page-header">
-        <span class="eyebrow">// What I've built</span>
-        <h1>Projects & <span class="gradient">Builds</span></h1>
-        <p>A collection of things I've built — at work, in class, and on my own time.</p>
+        <span class="eyebrow">// What I've worked on</span>
+        <h1>Experience & <span class="gradient">Impact</span></h1>
+        <p>A look at the places I've contributed and the people I've worked with.</p>
     </header>
 
-    <nav class="category-nav" aria-label="Project categories">
-        <a href="#production">Production</a>
-        <a href="#school">School</a>
-        <a href="#independent">Independent</a>
-    </nav>
+    <section>
+        <p class="section-label">// Professional</p>
+        <h2>Technical Experience</h2>
+        <div class="timeline">
+            <article class="experience-card">
+                <div class="experience-header">
+                    <div>
+                        <h3>Onto Innovation</h3>
+                        <p class="role">Software Engineering Contractor &middot; Hybrid / Milpitas, CA</p>
+                    </div>
+                    <span class="tag">Dec 2024 – Present</span>
+                </div>
+                <p>Developed and maintained advanced GUI tools in C# and WinForms for semiconductor image analysis, following Model-View-Controller (MVC) architecture. Built and optimized a defect classification algorithm in C#, delivering a solution 10x faster than the existing approach and accelerating the team's inspection workflow. Implemented new product features including subimage extraction and refined UI event handling, then validated each change through targeted debugging. Test and debug individually assigned features — including writing test cases and investigating reported issues — while collaborating with senior engineers on more complex fixes.</p>
+                <div class="tag-list">
+                    <span class="tag">C#</span>
+                    <span class="tag">WinForms</span>
+                    <span class="tag">MVC</span>
+                </div>
+            </article>
 
-    <section id="production">
-        <p class="section-label">// Production</p>
-        <h2>Production</h2>
-        <p class="category-desc">Projects completed on the job — shipped features and tools built as part of my work.</p>
-        <div class="project-grid">
-            <div class="empty-state">Write-ups coming soon.</div>
+            <article class="experience-card">
+                <div class="experience-header">
+                    <div>
+                        <h3>Lumina Instruments</h3>
+                        <p class="role">Engineering Intern &middot; Sunnyvale, CA</p>
+                    </div>
+                    <span class="tag">Jun 2024 – Aug 2024</span>
+                </div>
+                <p>Tested electronic circuit boards and power supply modules using multimeters, oscilloscopes, and function generators to validate hardware behavior against spec. Revised and updated internal test procedures to reflect current hardware revisions, improving accuracy and reducing repeat work for the engineering team. Configured production computer systems end-to-end, installing hardware components and software applications to support ongoing test operations.</p>
+                <div class="tag-list">
+                    <span class="tag">Circuit Testing</span>
+                    <span class="tag">Hardware Config</span>
+                </div>
+            </article>
+
+            <article class="experience-card">
+                <div class="experience-header">
+                    <div>
+                        <h3>Cepheid</h3>
+                        <p class="role">Manufacturing Software Engineering Intern &middot; Sunnyvale, CA</p>
+                    </div>
+                    <span class="tag">Jun 2022 – Sep 2022</span>
+                </div>
+                <p>Partnered with the firmware verification team to perform functional, optical, and thermal calibration tests on a flagship diagnostic product. Validated the manufacturing software against the test protocol, identifying and closing gaps to ensure full coverage between hardware tests and software checks. Contributed to a C# project designed to surface module failures earlier in the production line, helping reduce downstream rework.</p>
+                <div class="tag-list">
+                    <span class="tag">Firmware Verification</span>
+                    <span class="tag">Software Validation</span>
+                    <span class="tag">Calibration</span>
+                </div>
+            </article>
         </div>
     </section>
 
-    <section id="school">
-        <p class="section-label">// School</p>
-        <h2>School</h2>
-        <p class="category-desc">Coursework and assignments from CSU Fullerton and De Anza College.</p>
-        <div class="project-grid">
-            <div class="empty-state">Write-ups coming soon.</div>
-        </div>
-    </section>
-
-    <section id="independent">
-        <p class="section-label">// Independent</p>
-        <h2>Independent</h2>
-        <p class="category-desc">Personal projects built outside of work and school, on my own time.</p>
-        <div class="project-grid">
-            <div class="empty-state">Write-ups coming soon.</div>
+    <section>
+        <p class="section-label">// Community</p>
+        <h2>Giving Back</h2>
+        <div class="community-card">
+            <div>
+                <h3>Silicon Valley Education Foundation</h3>
+                <p class="role">College Mentor</p>
+                <p>Silicon Valley Education Foundation is a non-profit dedicated to improving STEM education in the Silicon Valley region — specifically to provide underserved students with an equal opportunity for success. My role took place in the classroom: teaching students math and helping them prepare for college.</p>
+            </div>
+            <img src="SVEF.png" alt="Silicon Valley Education Foundation Logo">
         </div>
     </section>
 
